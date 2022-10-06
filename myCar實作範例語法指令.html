@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>myCar&#x5BE6;&#x4F5C;&#x7BC4;&#x4F8B;</title>
+        <style>
+/* From extension vscode.markdown-math */
+@font-face{font-family:KaTeX_AMS;src:url(fonts/KaTeX_AMS-Regular.woff2) format("woff2"),url(fonts/KaTeX_AMS-Regular.woff) format("woff"),url(fonts/KaTeX_AMS-Regular.ttf) format("truetype");font-weight:400;font-style:normal}@font-face{font-family:KaTeX_Caligraphic;src:url(fonts/KaTeX_Caligraphic-Bold.woff2) format("woff2"),url(fonts/KaTeX_Caligraphic-Bold.woff) format("woff"),url(fonts/KaTeX_Caligraphic-Bold.ttf) format("truetype");font-weight:700;font-style:normal}@font-face{font-family:KaTeX_Caligraphic;src:url(fonts/KaTeX_Caligraphic-Regular.woff2) format("woff2"),url(fonts/KaTeX_Caligraphic-Regular.woff) format("woff"),url(fonts/KaTeX_Caligraphic-Regular.ttf) format("truetype");font-weight:400;font-style:normal}@font-face{font-family:KaTeX_Fraktur;src:url(fonts/KaTeX_Fraktur-Bold.woff2) format("woff2"),url(fonts/KaTeX_Fraktur-Bold.woff) format("woff"),url(fonts/KaTeX_Fraktur-Bold.ttf) format("truetype");font-weight:700;font-style:normal}@font-face{font-family:KaTeX_Fraktur;src:url(fonts/KaTeX_Fraktur-Regular.woff2) format("woff2"),url(fonts/KaTeX_Fraktur-Regular.woff) format("woff"),url(fonts/KaTeX_Fraktur-Regular.ttf) format("truetype");font-weight:400;font-style:normal}@font-face{font-family:KaTeX_Main;src:url(fonts/KaTeX_Main-Bold.woff2) format("woff2"),url(fonts/KaTeX_Main-Bold.woff) format("woff"),url(fonts/KaTeX_Main-Bold.ttf) format("truetype");font-weight:700;font-style:normal}@font-face{font-family:KaTeX_Main;src:url(fonts/KaTeX_Main-BoldItalic.woff2) format("woff2"),url(fonts/KaTeX_Main-BoldItalic.woff) format("woff"),url(fonts/KaTeX_Main-BoldItalic.ttf) format("truetype");font-weight:700;font-style:italic}@font-face{font-family:KaTeX_Main;src:url(fonts/KaTeX_Main-Italic.woff2) format("woff2"),url(fonts/KaTeX_Main-Italic.woff) format("woff"),url(fonts/KaTeX_Main-Italic.ttf) format("truetype");font-weight:400;font-style:italic}@font-face{font-family:KaTeX_Main;src:url(fonts/KaTeX_Main-Regular.woff2) format("woff2"),url(fonts/KaTeX_Main-Regular.woff) format("woff"),url(fonts/KaTeX_Main-Regular.ttf) format("truetype");font-weight:400;font-style:normal}@font-face{font-family:KaTeX_Math;src:url(fonts/KaTeX_Math-BoldItalic.woff2) format("woff2"),url(fonts/KaTeX_Math-BoldItalic.woff) format("woff"),url(fonts/KaTeX_Math-BoldItalic.ttf) format("truetype");font-weight:700;font-style:italic}@font-face{font-family:KaTeX_Math;src:url(fonts/KaTeX_Math-Italic.woff2) format("woff2"),url(fonts/KaTeX_Math-Italic.woff) format("woff"),url(fonts/KaTeX_Math-Italic.ttf) format("truetype");font-weight:400;font-style:italic}@font-face{font-family:"KaTeX_SansSerif";src:url(fonts/KaTeX_SansSerif-Bold.woff2) format("woff2"),url(fonts/KaTeX_SansSerif-Bold.woff) format("woff"),url(fonts/KaTeX_SansSerif-Bold.ttf) format("truetype");font-weight:700;font-style:normal}@font-face{font-family:"KaTeX_SansSerif";src:url(fonts/KaTeX_SansSerif-Italic.woff2) format("woff2"),url(fonts/KaTeX_SansSerif-Italic.woff) format("woff"),url(fonts/KaTeX_SansSerif-Italic.ttf) format("truetype");font-weight:400;font-style:italic}@font-face{font-family:"KaTeX_SansSerif";src:url(fonts/KaTeX_SansSerif-Regular.woff2) format("woff2"),url(fonts/KaTeX_SansSerif-Regular.woff) format("woff"),url(fonts/KaTeX_SansSerif-Regular.ttf) format("truetype");font-weight:400;font-style:normal}@font-face{font-family:KaTeX_Script;src:url(fonts/KaTeX_Script-Regular.woff2) format("woff2"),url(fonts/KaTeX_Script-Regular.woff) format("woff"),url(fonts/KaTeX_Script-Regular.ttf) format("truetype");font-weight:400;font-style:normal}@font-face{font-family:KaTeX_Size1;src:url(fonts/KaTeX_Size1-Regular.woff2) format("woff2"),url(fonts/KaTeX_Size1-Regular.woff) format("woff"),url(fonts/KaTeX_Size1-Regular.ttf) format("truetype");font-weight:400;font-style:normal}@font-face{font-family:KaTeX_Size2;src:url(fonts/KaTeX_Size2-Regular.woff2) format("woff2"),url(fonts/KaTeX_Size2-Regular.woff) format("woff"),url(fonts/KaTeX_Size2-Regular.ttf) format("truetype");font-weight:400;font-style:normal}@font-face{font-family:KaTeX_Size3;src:url(fonts/KaTeX_Size3-Regular.woff2) format("woff2"),url(fonts/KaTeX_Size3-Regular.woff) format("woff"),url(fonts/KaTeX_Size3-Regular.ttf) format("truetype");font-weight:400;font-style:normal}@font-face{font-family:KaTeX_Size4;src:url(fonts/KaTeX_Size4-Regular.woff2) format("woff2"),url(fonts/KaTeX_Size4-Regular.woff) format("woff"),url(fonts/KaTeX_Size4-Regular.ttf) format("truetype");font-weight:400;font-style:normal}@font-face{font-family:KaTeX_Typewriter;src:url(fonts/KaTeX_Typewriter-Regular.woff2) format("woff2"),url(fonts/KaTeX_Typewriter-Regular.woff) format("woff"),url(fonts/KaTeX_Typewriter-Regular.ttf) format("truetype");font-weight:400;font-style:normal}.katex{font:normal 1.21em KaTeX_Main,Times New Roman,serif;line-height:1.2;text-indent:0;text-rendering:auto;border-color:currentColor}.katex *{-ms-high-contrast-adjust:none!important}.katex .katex-version:after{content:"0.13.0"}.katex .katex-mathml{position:absolute;clip:rect(1px,1px,1px,1px);padding:0;border:0;height:1px;width:1px;overflow:hidden}.katex .katex-html>.newline{display:block}.katex .base{position:relative;white-space:nowrap;width:-webkit-min-content;width:-moz-min-content;width:min-content}.katex .base,.katex .strut{display:inline-block}.katex .textbf{font-weight:700}.katex .textit{font-style:italic}.katex .textrm{font-family:KaTeX_Main}.katex .textsf{font-family:KaTeX_SansSerif}.katex .texttt{font-family:KaTeX_Typewriter}.katex .mathnormal{font-family:KaTeX_Math;font-style:italic}.katex .mathit{font-family:KaTeX_Main;font-style:italic}.katex .mathrm{font-style:normal}.katex .mathbf{font-family:KaTeX_Main;font-weight:700}.katex .boldsymbol{font-family:KaTeX_Math;font-weight:700;font-style:italic}.katex .amsrm,.katex .mathbb,.katex .textbb{font-family:KaTeX_AMS}.katex .mathcal{font-family:KaTeX_Caligraphic}.katex .mathfrak,.katex .textfrak{font-family:KaTeX_Fraktur}.katex .mathtt{font-family:KaTeX_Typewriter}.katex .mathscr,.katex .textscr{font-family:KaTeX_Script}.katex .mathsf,.katex .textsf{font-family:KaTeX_SansSerif}.katex .mathboldsf,.katex .textboldsf{font-family:KaTeX_SansSerif;font-weight:700}.katex .mathitsf,.katex .textitsf{font-family:KaTeX_SansSerif;font-style:italic}.katex .mainrm{font-family:KaTeX_Main;font-style:normal}.katex .vlist-t{display:inline-table;table-layout:fixed;border-collapse:collapse}.katex .vlist-r{display:table-row}.katex .vlist{display:table-cell;vertical-align:bottom;position:relative}.katex .vlist>span{display:block;height:0;position:relative}.katex .vlist>span>span{display:inline-block}.katex .vlist>span>.pstrut{overflow:hidden;width:0}.katex .vlist-t2{margin-right:-2px}.katex .vlist-s{display:table-cell;vertical-align:bottom;font-size:1px;width:2px;min-width:2px}.katex .vbox{display:inline-flex;flex-direction:column;align-items:baseline}.katex .hbox{width:100%}.katex .hbox,.katex .thinbox{display:inline-flex;flex-direction:row}.katex .thinbox{width:0;max-width:0}.katex .msupsub{text-align:left}.katex .mfrac>span>span{text-align:center}.katex .mfrac .frac-line{display:inline-block;width:100%;border-bottom-style:solid}.katex .hdashline,.katex .hline,.katex .mfrac .frac-line,.katex .overline .overline-line,.katex .rule,.katex .underline .underline-line{min-height:1px}.katex .mspace{display:inline-block}.katex .clap,.katex .llap,.katex .rlap{width:0;position:relative}.katex .clap>.inner,.katex .llap>.inner,.katex .rlap>.inner{position:absolute}.katex .clap>.fix,.katex .llap>.fix,.katex .rlap>.fix{display:inline-block}.katex .llap>.inner{right:0}.katex .clap>.inner,.katex .rlap>.inner{left:0}.katex .clap>.inner>span{margin-left:-50%;margin-right:50%}.katex .rule{display:inline-block;border:0 solid;position:relative}.katex .hline,.katex .overline .overline-line,.katex .underline .underline-line{display:inline-block;width:100%;border-bottom-style:solid}.katex .hdashline{display:inline-block;width:100%;border-bottom-style:dashed}.katex .sqrt>.root{margin-left:.27777778em;margin-right:-.55555556em}.katex .fontsize-ensurer.reset-size1.size1,.katex .sizing.reset-size1.size1{font-size:1em}.katex .fontsize-ensurer.reset-size1.size2,.katex .sizing.reset-size1.size2{font-size:1.2em}.katex .fontsize-ensurer.reset-size1.size3,.katex .sizing.reset-size1.size3{font-size:1.4em}.katex .fontsize-ensurer.reset-size1.size4,.katex .sizing.reset-size1.size4{font-size:1.6em}.katex .fontsize-ensurer.reset-size1.size5,.katex .sizing.reset-size1.size5{font-size:1.8em}.katex .fontsize-ensurer.reset-size1.size6,.katex .sizing.reset-size1.size6{font-size:2em}.katex .fontsize-ensurer.reset-size1.size7,.katex .sizing.reset-size1.size7{font-size:2.4em}.katex .fontsize-ensurer.reset-size1.size8,.katex .sizing.reset-size1.size8{font-size:2.88em}.katex .fontsize-ensurer.reset-size1.size9,.katex .sizing.reset-size1.size9{font-size:3.456em}.katex .fontsize-ensurer.reset-size1.size10,.katex .sizing.reset-size1.size10{font-size:4.148em}.katex .fontsize-ensurer.reset-size1.size11,.katex .sizing.reset-size1.size11{font-size:4.976em}.katex .fontsize-ensurer.reset-size2.size1,.katex .sizing.reset-size2.size1{font-size:.83333333em}.katex .fontsize-ensurer.reset-size2.size2,.katex .sizing.reset-size2.size2{font-size:1em}.katex .fontsize-ensurer.reset-size2.size3,.katex .sizing.reset-size2.size3{font-size:1.16666667em}.katex .fontsize-ensurer.reset-size2.size4,.katex .sizing.reset-size2.size4{font-size:1.33333333em}.katex .fontsize-ensurer.reset-size2.size5,.katex .sizing.reset-size2.size5{font-size:1.5em}.katex .fontsize-ensurer.reset-size2.size6,.katex .sizing.reset-size2.size6{font-size:1.66666667em}.katex .fontsize-ensurer.reset-size2.size7,.katex .sizing.reset-size2.size7{font-size:2em}.katex .fontsize-ensurer.reset-size2.size8,.katex .sizing.reset-size2.size8{font-size:2.4em}.katex .fontsize-ensurer.reset-size2.size9,.katex .sizing.reset-size2.size9{font-size:2.88em}.katex .fontsize-ensurer.reset-size2.size10,.katex .sizing.reset-size2.size10{font-size:3.45666667em}.katex .fontsize-ensurer.reset-size2.size11,.katex .sizing.reset-size2.size11{font-size:4.14666667em}.katex .fontsize-ensurer.reset-size3.size1,.katex .sizing.reset-size3.size1{font-size:.71428571em}.katex .fontsize-ensurer.reset-size3.size2,.katex .sizing.reset-size3.size2{font-size:.85714286em}.katex .fontsize-ensurer.reset-size3.size3,.katex .sizing.reset-size3.size3{font-size:1em}.katex .fontsize-ensurer.reset-size3.size4,.katex .sizing.reset-size3.size4{font-size:1.14285714em}.katex .fontsize-ensurer.reset-size3.size5,.katex .sizing.reset-size3.size5{font-size:1.28571429em}.katex .fontsize-ensurer.reset-size3.size6,.katex .sizing.reset-size3.size6{font-size:1.42857143em}.katex .fontsize-ensurer.reset-size3.size7,.katex .sizing.reset-size3.size7{font-size:1.71428571em}.katex .fontsize-ensurer.reset-size3.size8,.katex .sizing.reset-size3.size8{font-size:2.05714286em}.katex .fontsize-ensurer.reset-size3.size9,.katex .sizing.reset-size3.size9{font-size:2.46857143em}.katex .fontsize-ensurer.reset-size3.size10,.katex .sizing.reset-size3.size10{font-size:2.96285714em}.katex .fontsize-ensurer.reset-size3.size11,.katex .sizing.reset-size3.size11{font-size:3.55428571em}.katex .fontsize-ensurer.reset-size4.size1,.katex .sizing.reset-size4.size1{font-size:.625em}.katex .fontsize-ensurer.reset-size4.size2,.katex .sizing.reset-size4.size2{font-size:.75em}.katex .fontsize-ensurer.reset-size4.size3,.katex .sizing.reset-size4.size3{font-size:.875em}.katex .fontsize-ensurer.reset-size4.size4,.katex .sizing.reset-size4.size4{font-size:1em}.katex .fontsize-ensurer.reset-size4.size5,.katex .sizing.reset-size4.size5{font-size:1.125em}.katex .fontsize-ensurer.reset-size4.size6,.katex .sizing.reset-size4.size6{font-size:1.25em}.katex .fontsize-ensurer.reset-size4.size7,.katex .sizing.reset-size4.size7{font-size:1.5em}.katex .fontsize-ensurer.reset-size4.size8,.katex .sizing.reset-size4.size8{font-size:1.8em}.katex .fontsize-ensurer.reset-size4.size9,.katex .sizing.reset-size4.size9{font-size:2.16em}.katex .fontsize-ensurer.reset-size4.size10,.katex .sizing.reset-size4.size10{font-size:2.5925em}.katex .fontsize-ensurer.reset-size4.size11,.katex .sizing.reset-size4.size11{font-size:3.11em}.katex .fontsize-ensurer.reset-size5.size1,.katex .sizing.reset-size5.size1{font-size:.55555556em}.katex .fontsize-ensurer.reset-size5.size2,.katex .sizing.reset-size5.size2{font-size:.66666667em}.katex .fontsize-ensurer.reset-size5.size3,.katex .sizing.reset-size5.size3{font-size:.77777778em}.katex .fontsize-ensurer.reset-size5.size4,.katex .sizing.reset-size5.size4{font-size:.88888889em}.katex .fontsize-ensurer.reset-size5.size5,.katex .sizing.reset-size5.size5{font-size:1em}.katex .fontsize-ensurer.reset-size5.size6,.katex .sizing.reset-size5.size6{font-size:1.11111111em}.katex .fontsize-ensurer.reset-size5.size7,.katex .sizing.reset-size5.size7{font-size:1.33333333em}.katex .fontsize-ensurer.reset-size5.size8,.katex .sizing.reset-size5.size8{font-size:1.6em}.katex .fontsize-ensurer.reset-size5.size9,.katex .sizing.reset-size5.size9{font-size:1.92em}.katex .fontsize-ensurer.reset-size5.size10,.katex .sizing.reset-size5.size10{font-size:2.30444444em}.katex .fontsize-ensurer.reset-size5.size11,.katex .sizing.reset-size5.size11{font-size:2.76444444em}.katex .fontsize-ensurer.reset-size6.size1,.katex .sizing.reset-size6.size1{font-size:.5em}.katex .fontsize-ensurer.reset-size6.size2,.katex .sizing.reset-size6.size2{font-size:.6em}.katex .fontsize-ensurer.reset-size6.size3,.katex .sizing.reset-size6.size3{font-size:.7em}.katex .fontsize-ensurer.reset-size6.size4,.katex .sizing.reset-size6.size4{font-size:.8em}.katex .fontsize-ensurer.reset-size6.size5,.katex .sizing.reset-size6.size5{font-size:.9em}.katex .fontsize-ensurer.reset-size6.size6,.katex .sizing.reset-size6.size6{font-size:1em}.katex .fontsize-ensurer.reset-size6.size7,.katex .sizing.reset-size6.size7{font-size:1.2em}.katex .fontsize-ensurer.reset-size6.size8,.katex .sizing.reset-size6.size8{font-size:1.44em}.katex .fontsize-ensurer.reset-size6.size9,.katex .sizing.reset-size6.size9{font-size:1.728em}.katex .fontsize-ensurer.reset-size6.size10,.katex .sizing.reset-size6.size10{font-size:2.074em}.katex .fontsize-ensurer.reset-size6.size11,.katex .sizing.reset-size6.size11{font-size:2.488em}.katex .fontsize-ensurer.reset-size7.size1,.katex .sizing.reset-size7.size1{font-size:.41666667em}.katex .fontsize-ensurer.reset-size7.size2,.katex .sizing.reset-size7.size2{font-size:.5em}.katex .fontsize-ensurer.reset-size7.size3,.katex .sizing.reset-size7.size3{font-size:.58333333em}.katex .fontsize-ensurer.reset-size7.size4,.katex .sizing.reset-size7.size4{font-size:.66666667em}.katex .fontsize-ensurer.reset-size7.size5,.katex .sizing.reset-size7.size5{font-size:.75em}.katex .fontsize-ensurer.reset-size7.size6,.katex .sizing.reset-size7.size6{font-size:.83333333em}.katex .fontsize-ensurer.reset-size7.size7,.katex .sizing.reset-size7.size7{font-size:1em}.katex .fontsize-ensurer.reset-size7.size8,.katex .sizing.reset-size7.size8{font-size:1.2em}.katex .fontsize-ensurer.reset-size7.size9,.katex .sizing.reset-size7.size9{font-size:1.44em}.katex .fontsize-ensurer.reset-size7.size10,.katex .sizing.reset-size7.size10{font-size:1.72833333em}.katex .fontsize-ensurer.reset-size7.size11,.katex .sizing.reset-size7.size11{font-size:2.07333333em}.katex .fontsize-ensurer.reset-size8.size1,.katex .sizing.reset-size8.size1{font-size:.34722222em}.katex .fontsize-ensurer.reset-size8.size2,.katex .sizing.reset-size8.size2{font-size:.41666667em}.katex .fontsize-ensurer.reset-size8.size3,.katex .sizing.reset-size8.size3{font-size:.48611111em}.katex .fontsize-ensurer.reset-size8.size4,.katex .sizing.reset-size8.size4{font-size:.55555556em}.katex .fontsize-ensurer.reset-size8.size5,.katex .sizing.reset-size8.size5{font-size:.625em}.katex .fontsize-ensurer.reset-size8.size6,.katex .sizing.reset-size8.size6{font-size:.69444444em}.katex .fontsize-ensurer.reset-size8.size7,.katex .sizing.reset-size8.size7{font-size:.83333333em}.katex .fontsize-ensurer.reset-size8.size8,.katex .sizing.reset-size8.size8{font-size:1em}.katex .fontsize-ensurer.reset-size8.size9,.katex .sizing.reset-size8.size9{font-size:1.2em}.katex .fontsize-ensurer.reset-size8.size10,.katex .sizing.reset-size8.size10{font-size:1.44027778em}.katex .fontsize-ensurer.reset-size8.size11,.katex .sizing.reset-size8.size11{font-size:1.72777778em}.katex .fontsize-ensurer.reset-size9.size1,.katex .sizing.reset-size9.size1{font-size:.28935185em}.katex .fontsize-ensurer.reset-size9.size2,.katex .sizing.reset-size9.size2{font-size:.34722222em}.katex .fontsize-ensurer.reset-size9.size3,.katex .sizing.reset-size9.size3{font-size:.40509259em}.katex .fontsize-ensurer.reset-size9.size4,.katex .sizing.reset-size9.size4{font-size:.46296296em}.katex .fontsize-ensurer.reset-size9.size5,.katex .sizing.reset-size9.size5{font-size:.52083333em}.katex .fontsize-ensurer.reset-size9.size6,.katex .sizing.reset-size9.size6{font-size:.5787037em}.katex .fontsize-ensurer.reset-size9.size7,.katex .sizing.reset-size9.size7{font-size:.69444444em}.katex .fontsize-ensurer.reset-size9.size8,.katex .sizing.reset-size9.size8{font-size:.83333333em}.katex .fontsize-ensurer.reset-size9.size9,.katex .sizing.reset-size9.size9{font-size:1em}.katex .fontsize-ensurer.reset-size9.size10,.katex .sizing.reset-size9.size10{font-size:1.20023148em}.katex .fontsize-ensurer.reset-size9.size11,.katex .sizing.reset-size9.size11{font-size:1.43981481em}.katex .fontsize-ensurer.reset-size10.size1,.katex .sizing.reset-size10.size1{font-size:.24108004em}.katex .fontsize-ensurer.reset-size10.size2,.katex .sizing.reset-size10.size2{font-size:.28929605em}.katex .fontsize-ensurer.reset-size10.size3,.katex .sizing.reset-size10.size3{font-size:.33751205em}.katex .fontsize-ensurer.reset-size10.size4,.katex .sizing.reset-size10.size4{font-size:.38572806em}.katex .fontsize-ensurer.reset-size10.size5,.katex .sizing.reset-size10.size5{font-size:.43394407em}.katex .fontsize-ensurer.reset-size10.size6,.katex .sizing.reset-size10.size6{font-size:.48216008em}.katex .fontsize-ensurer.reset-size10.size7,.katex .sizing.reset-size10.size7{font-size:.57859209em}.katex .fontsize-ensurer.reset-size10.size8,.katex .sizing.reset-size10.size8{font-size:.69431051em}.katex .fontsize-ensurer.reset-size10.size9,.katex .sizing.reset-size10.size9{font-size:.83317261em}.katex .fontsize-ensurer.reset-size10.size10,.katex .sizing.reset-size10.size10{font-size:1em}.katex .fontsize-ensurer.reset-size10.size11,.katex .sizing.reset-size10.size11{font-size:1.19961427em}.katex .fontsize-ensurer.reset-size11.size1,.katex .sizing.reset-size11.size1{font-size:.20096463em}.katex .fontsize-ensurer.reset-size11.size2,.katex .sizing.reset-size11.size2{font-size:.24115756em}.katex .fontsize-ensurer.reset-size11.size3,.katex .sizing.reset-size11.size3{font-size:.28135048em}.katex .fontsize-ensurer.reset-size11.size4,.katex .sizing.reset-size11.size4{font-size:.32154341em}.katex .fontsize-ensurer.reset-size11.size5,.katex .sizing.reset-size11.size5{font-size:.36173633em}.katex .fontsize-ensurer.reset-size11.size6,.katex .sizing.reset-size11.size6{font-size:.40192926em}.katex .fontsize-ensurer.reset-size11.size7,.katex .sizing.reset-size11.size7{font-size:.48231511em}.katex .fontsize-ensurer.reset-size11.size8,.katex .sizing.reset-size11.size8{font-size:.57877814em}.katex .fontsize-ensurer.reset-size11.size9,.katex .sizing.reset-size11.size9{font-size:.69453376em}.katex .fontsize-ensurer.reset-size11.size10,.katex .sizing.reset-size11.size10{font-size:.83360129em}.katex .fontsize-ensurer.reset-size11.size11,.katex .sizing.reset-size11.size11{font-size:1em}.katex .delimsizing.size1{font-family:KaTeX_Size1}.katex .delimsizing.size2{font-family:KaTeX_Size2}.katex .delimsizing.size3{font-family:KaTeX_Size3}.katex .delimsizing.size4{font-family:KaTeX_Size4}.katex .delimsizing.mult .delim-size1>span{font-family:KaTeX_Size1}.katex .delimsizing.mult .delim-size4>span{font-family:KaTeX_Size4}.katex .nulldelimiter{display:inline-block;width:.12em}.katex .delimcenter,.katex .op-symbol{position:relative}.katex .op-symbol.small-op{font-family:KaTeX_Size1}.katex .op-symbol.large-op{font-family:KaTeX_Size2}.katex .accent>.vlist-t,.katex .op-limits>.vlist-t{text-align:center}.katex .accent .accent-body{position:relative}.katex .accent .accent-body:not(.accent-full){width:0}.katex .overlay{display:block}.katex .mtable .vertical-separator{display:inline-block;min-width:1px}.katex .mtable .arraycolsep{display:inline-block}.katex .mtable .col-align-c>.vlist-t{text-align:center}.katex .mtable .col-align-l>.vlist-t{text-align:left}.katex .mtable .col-align-r>.vlist-t{text-align:right}.katex .svg-align{text-align:left}.katex svg{display:block;position:absolute;width:100%;height:inherit;fill:currentColor;stroke:currentColor;fill-rule:nonzero;fill-opacity:1;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1}.katex svg path{stroke:none}.katex img{border-style:none;min-width:0;min-height:0;max-width:none;max-height:none}.katex .stretchy{width:100%;display:block;position:relative;overflow:hidden}.katex .stretchy:after,.katex .stretchy:before{content:""}.katex .hide-tail{width:100%;position:relative;overflow:hidden}.katex .halfarrow-left{position:absolute;left:0;width:50.2%;overflow:hidden}.katex .halfarrow-right{position:absolute;right:0;width:50.2%;overflow:hidden}.katex .brace-left{position:absolute;left:0;width:25.1%;overflow:hidden}.katex .brace-center{position:absolute;left:25%;width:50%;overflow:hidden}.katex .brace-right{position:absolute;right:0;width:25.1%;overflow:hidden}.katex .x-arrow-pad{padding:0 .5em}.katex .cd-arrow-pad{padding:0 .55556em 0 .27778em}.katex .mover,.katex .munder,.katex .x-arrow{text-align:center}.katex .boxpad{padding:0 .3em}.katex .fbox,.katex .fcolorbox{box-sizing:border-box;border:.04em solid}.katex .cancel-pad{padding:0 .2em}.katex .cancel-lap{margin-left:-.2em;margin-right:-.2em}.katex .sout{border-bottom-style:solid;border-bottom-width:.08em}.katex .angl{box-sizing:border-content;border-top:.049em solid;border-right:.049em solid;margin-right:.03889em}.katex .anglpad{padding:0 .03889em}.katex .eqn-num:before{counter-increment:katexEqnNo;content:"(" counter(katexEqnNo) ")"}.katex .mml-eqn-num:before{counter-increment:mmlEqnNo;content:"(" counter(mmlEqnNo) ")"}.katex .mtr-glue{width:50%}.katex .cd-vert-arrow{display:inline-block;position:relative}.katex .cd-label-left{display:inline-block;position:absolute;right:calc(50% + .3em);text-align:left}.katex .cd-label-right{display:inline-block;position:absolute;left:calc(50% + .3em);text-align:right}.katex-display{display:block;margin:1em 0;text-align:center}.katex-display>.katex{display:block;text-align:center;white-space:nowrap}.katex-display>.katex>.katex-html{display:block;position:relative}.katex-display>.katex>.katex-html>.tag{position:absolute;right:0}.katex-display.leqno>.katex>.katex-html>.tag{left:0;right:auto}.katex-display.fleqn>.katex{text-align:left;padding-left:2em}body{counter-reset:katexEqnNo mmlEqnNo}
+
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+.katex-error {
+	color: var(--vscode-editorError-foreground);
+}
+
+</style>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/katex.min.css" integrity="sha384-yFRtMMDnQtDRO8rLpMIKrtPCD5jdktao2TV19YiZYWMDkUR5GQZR/NOVTdquEx1j" crossorigin="anonymous">
+<link href="https://cdn.jsdelivr.net/npm/katex-copytex@latest/dist/katex-copytex.min.css" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/markdown.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/highlight.css">
+<style>
+            body {
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', system-ui, 'Ubuntu', 'Droid Sans', sans-serif;
+                font-size: 14px;
+                line-height: 1.6;
+            }
+        </style>
+        <style>
+.task-list-item { list-style-type: none; } .task-list-item-checkbox { margin-left: -20px; vertical-align: middle; }
+</style>
+        
+        <script src="https://cdn.jsdelivr.net/npm/katex-copytex@latest/dist/katex-copytex.min.js"></script>
+        
+    </head>
+    <body class="vscode-body vscode-light">
+        <h1 id="mycar實作範例">myCar實作範例</h1>
+<h3 id="自建fabric節點安裝智慧合約與啟動應用程式語法指令">自建Fabric節點安裝智慧合約與啟動應用程式語法指令</h3>
+<h3 id="note-以下指令適用於已建立hyperledger-fabric-network與dev-channel環境下執行"><strong>Note:</strong> 以下指令適用於已建立Hyperledger Fabric Network與dev-channel環境下執行。</h3>
+<hr>
+<ul>
+<li><a href="#1">安裝智慧合約</a></li>
+<li><a href="#2">啟動應用程式</a></li>
+</ul>
+<hr>
+<h1 id="安裝智慧合約"><a name="1">安裝智慧合約</a></h1>
+<h3 id="1-將mycarprivate-js智慧合約程式下載於專案目錄fabric-devchaincode">1. 將myCarPrivate-js智慧合約程式下載於專案目錄fabric-dev/chaincode。</h3>
+<h3 id="2-啟動自建的hyperledger-fabric-network">2. 啟動自建的Hyperledger Fabric Network。</h3>
+<pre><code class="language-bash"><div><span class="hljs-comment"># 啟動區塊鏈網路</span>
+$ <span class="hljs-built_in">cd</span> ~/fabric-dev
+$ <span class="hljs-built_in">export</span> FABRIC_CFG_PATH=<span class="hljs-variable">$PWD</span>
+$ <span class="hljs-built_in">export</span> IMAGE_TAG=2.2.2
+$ <span class="hljs-built_in">export</span> CA_IMAGE_TAG=1.4.9
+$ <span class="hljs-built_in">export</span> SYS_CHANNEL=sys-channel
+$ <span class="hljs-built_in">export</span> COMPOSE_PROJECT_NAME=dev
+$ docker-compose -f ./docker/docker-compose-test-net.yaml -f ./docker/docker-compose-ca.yaml -f ./docker/docker-compose-couch.yaml up -d 2&gt;&amp;1
+</div></code></pre>
+<h3 id="3-打包mycarprivate-js智慧合約程式">3. 打包myCarPrivate-js智慧合約程式。</h3>
+<pre><code class="language-bash"><div><span class="hljs-comment"># 進入Cli Bash</span>
+$ docker <span class="hljs-built_in">exec</span> -it cli bash
+
+<span class="hljs-comment"># 打包智慧合約程式</span>
+<span class="hljs-comment"># 若Fabric Network已安裝過myCarPrivate-js智慧合約，--label可更改智慧合約版本。ex. mycar_1.1</span>
+$ peer lifecycle chaincode package mycar.tar.gz --path /opt/gopath/src/github.com/hyperledger/fabric/peer/chaincode/myCarPrivate-js --lang node --label mycar_1.0
+</div></code></pre>
+<h3 id="4-peer0org1examplecom節點安裝chaincode">4. peer0.org1.example.com節點安裝Chaincode</h3>
+<pre><code class="language-bash"><div><span class="hljs-comment"># 轉換至peer0.org1.example.com</span>
+$ <span class="hljs-built_in">export</span> CORE_PEER_LOCALMSPID=<span class="hljs-string">&quot;Org1MSP&quot;</span>
+$ <span class="hljs-built_in">export</span> CORE_PEER_MSPCONFIGPATH=/opt/gopath/src/github.com/hyperledger/fabric/peer/organizations/peerOrganizations/org1.example.com/users/Admin@org1.example.com/msp
+$ <span class="hljs-built_in">export</span> CORE_PEER_TLS_ROOTCERT_FILE=/opt/gopath/src/github.com/hyperledger/fabric/peer/organizations/peerOrganizations/org1.example.com/peers/peer0.org1.example.com/tls/ca.crt
+$ <span class="hljs-built_in">export</span> CORE_PEER_ADDRESS=peer0.org1.example.com:7051
+
+<span class="hljs-comment"># 安裝智慧合約程式</span>
+<span class="hljs-comment"># 安裝後記下Chaincode code package identifier</span>
+<span class="hljs-comment"># Chaincode code package identifier: mycar_1.0:c243b0af2d1f5ae47ac28c948f9588632759cf2d0f0febc3130d39c3907f04fa</span>
+$ peer lifecycle chaincode install mycar.tar.gz
+</div></code></pre>
+<h3 id="5-peer0org2examplecom節點安裝chaincode">5. peer0.org2.example.com節點安裝Chaincode</h3>
+<pre><code class="language-bash"><div><span class="hljs-comment"># 轉換至peer0.org2.example.com</span>
+$ <span class="hljs-built_in">export</span> CORE_PEER_LOCALMSPID=<span class="hljs-string">&quot;Org2MSP&quot;</span>
+$ <span class="hljs-built_in">export</span> CORE_PEER_MSPCONFIGPATH=/opt/gopath/src/github.com/hyperledger/fabric/peer/organizations/peerOrganizations/org2.example.com/users/Admin@org2.example.com/msp
+$ <span class="hljs-built_in">export</span> CORE_PEER_TLS_ROOTCERT_FILE=/opt/gopath/src/github.com/hyperledger/fabric/peer/organizations/peerOrganizations/org2.example.com/peers/peer0.org2.example.com/tls/ca.crt
+$ <span class="hljs-built_in">export</span> CORE_PEER_ADDRESS=peer0.org2.example.com:9051
+
+<span class="hljs-comment"># 安裝智慧合約程式</span>
+<span class="hljs-comment"># 安裝後記下Chaincode code package identifier</span>
+<span class="hljs-comment"># Chaincode code package identifier: mycar_1.0:c243b0af2d1f5ae47ac28c948f9588632759cf2d0f0febc3130d39c3907f04fa</span>
+$ peer lifecycle chaincode install mycar.tar.gz
+</div></code></pre>
+<h3 id="6-peer0org1examplecom節點核准智慧合約">6. peer0.org1.example.com節點核准智慧合約</h3>
+<pre><code class="language-bash"><div><span class="hljs-comment"># 轉換至peer0.org1.example.com</span>
+$ <span class="hljs-built_in">export</span> CORE_PEER_LOCALMSPID=<span class="hljs-string">&quot;Org1MSP&quot;</span>
+$ <span class="hljs-built_in">export</span> CORE_PEER_MSPCONFIGPATH=/opt/gopath/src/github.com/hyperledger/fabric/peer/organizations/peerOrganizations/org1.example.com/users/Admin@org1.example.com/msp
+$ <span class="hljs-built_in">export</span> CORE_PEER_TLS_ROOTCERT_FILE=/opt/gopath/src/github.com/hyperledger/fabric/peer/organizations/peerOrganizations/org1.example.com/peers/peer0.org1.example.com/tls/ca.crt
+$ <span class="hljs-built_in">export</span> CORE_PEER_ADDRESS=peer0.org1.example.com:7051
+
+<span class="hljs-comment"># 核准智慧合約程式</span>
+<span class="hljs-comment"># --package-id設定為安裝後的Chaincode code package identifier</span>
+<span class="hljs-comment"># --collections-config設定隱私資料集設定檔路徑 myCarPrivate-js/collections_config.json</span>
+<span class="hljs-comment"># --signature-policy設定合約背書策略 &quot;OR(&#x27;Org1MSP.member&#x27;,&#x27;Org2MSP.member&#x27;)&quot; </span>
+$ <span class="hljs-built_in">export</span> CHANNEL_NAME=dev-channel
+$ peer lifecycle chaincode approveformyorg -o orderer.example.com:7050 --tls --cafile /opt/gopath/src/github.com/hyperledger/fabric/peer/organizations/ordererOrganizations/example.com/orderers/orderer.example.com/msp/tlscacerts/tlsca.example.com-cert.pem --channelID <span class="hljs-variable">$CHANNEL_NAME</span> --name mycar --version 1.0 --package-id mycar_1.0:c243b0af2d1f5ae47ac28c948f9588632759cf2d0f0febc3130d39c3907f04fa --sequence 1 --collections-config /opt/gopath/src/github.com/hyperledger/fabric/peer/chaincode/myCarPrivate-js/collections_config.json --signature-policy <span class="hljs-string">&quot;OR(&#x27;Org1MSP.member&#x27;,&#x27;Org2MSP.member&#x27;)&quot;</span>
+</div></code></pre>
+<h3 id="7-peer0org2examplecom節點核准智慧合約">7. peer0.org2.example.com節點核准智慧合約</h3>
+<pre><code class="language-bash"><div><span class="hljs-comment"># 轉換至peer0.org2.example.com</span>
+$ <span class="hljs-built_in">export</span> CORE_PEER_LOCALMSPID=<span class="hljs-string">&quot;Org2MSP&quot;</span>
+$ <span class="hljs-built_in">export</span> CORE_PEER_MSPCONFIGPATH=/opt/gopath/src/github.com/hyperledger/fabric/peer/organizations/peerOrganizations/org2.example.com/users/Admin@org2.example.com/msp
+$ <span class="hljs-built_in">export</span> CORE_PEER_TLS_ROOTCERT_FILE=/opt/gopath/src/github.com/hyperledger/fabric/peer/organizations/peerOrganizations/org2.example.com/peers/peer0.org2.example.com/tls/ca.crt
+$ <span class="hljs-built_in">export</span> CORE_PEER_ADDRESS=peer0.org2.example.com:9051
+
+<span class="hljs-comment"># 核准智慧合約程式</span>
+<span class="hljs-comment"># --package-id設定為安裝後的Chaincode code package identifier</span>
+$ <span class="hljs-built_in">export</span> CHANNEL_NAME=dev-channel
+$ peer lifecycle chaincode approveformyorg -o orderer.example.com:7050 --tls --cafile /opt/gopath/src/github.com/hyperledger/fabric/peer/organizations/ordererOrganizations/example.com/orderers/orderer.example.com/msp/tlscacerts/tlsca.example.com-cert.pem --channelID <span class="hljs-variable">$CHANNEL_NAME</span> --name mycar --version 1.0 --package-id mycar_1.0:c243b0af2d1f5ae47ac28c948f9588632759cf2d0f0febc3130d39c3907f04fa --sequence 1 --collections-config /opt/gopath/src/github.com/hyperledger/fabric/peer/chaincode/myCarPrivate-js/collections_config.json --signature-policy <span class="hljs-string">&quot;OR(&#x27;Org1MSP.member&#x27;,&#x27;Org2MSP.member&#x27;)&quot;</span>
+</div></code></pre>
+<h3 id="8-peer0org1examplecom節點確認智慧合約是否準備提交">8. peer0.org1.example.com節點確認智慧合約是否準備提交</h3>
+<pre><code class="language-bash"><div><span class="hljs-comment"># 轉換至peer0.org1.example.com</span>
+$ <span class="hljs-built_in">export</span> CORE_PEER_LOCALMSPID=<span class="hljs-string">&quot;Org1MSP&quot;</span>
+$ <span class="hljs-built_in">export</span> CORE_PEER_MSPCONFIGPATH=/opt/gopath/src/github.com/hyperledger/fabric/peer/organizations/peerOrganizations/org1.example.com/users/Admin@org1.example.com/msp
+$ <span class="hljs-built_in">export</span> CORE_PEER_TLS_ROOTCERT_FILE=/opt/gopath/src/github.com/hyperledger/fabric/peer/organizations/peerOrganizations/org1.example.com/peers/peer0.org1.example.com/tls/ca.crt
+$ <span class="hljs-built_in">export</span> CORE_PEER_ADDRESS=peer0.org1.example.com:7051
+
+<span class="hljs-comment"># 確認智慧合約是否準備提交</span>
+$ <span class="hljs-built_in">export</span> CHANNEL_NAME=dev-channel
+$ peer lifecycle chaincode checkcommitreadiness --channelID <span class="hljs-variable">$CHANNEL_NAME</span> --name mycar --version 1.0 --sequence 1 --collections-config /opt/gopath/src/github.com/hyperledger/fabric/peer/chaincode/myCarPrivate-js/collections_config.json --signature-policy <span class="hljs-string">&quot;OR(&#x27;Org1MSP.member&#x27;,&#x27;Org2MSP.member&#x27;)&quot;</span>
+</div></code></pre>
+<h3 id="9-peer0org2examplecom節點確認智慧合約是否準備提交">9. peer0.org2.example.com節點確認智慧合約是否準備提交</h3>
+<pre><code class="language-bash"><div><span class="hljs-comment"># 轉換至peer0.org2.example.com</span>
+$ <span class="hljs-built_in">export</span> CORE_PEER_LOCALMSPID=<span class="hljs-string">&quot;Org2MSP&quot;</span>
+$ <span class="hljs-built_in">export</span> CORE_PEER_MSPCONFIGPATH=/opt/gopath/src/github.com/hyperledger/fabric/peer/organizations/peerOrganizations/org2.example.com/users/Admin@org2.example.com/msp
+$ <span class="hljs-built_in">export</span> CORE_PEER_TLS_ROOTCERT_FILE=/opt/gopath/src/github.com/hyperledger/fabric/peer/organizations/peerOrganizations/org2.example.com/peers/peer0.org2.example.com/tls/ca.crt
+$ <span class="hljs-built_in">export</span> CORE_PEER_ADDRESS=peer0.org2.example.com:9051
+
+<span class="hljs-comment"># 確認智慧合約是否準備提交</span>
+$ <span class="hljs-built_in">export</span> CHANNEL_NAME=dev-channel
+$ peer lifecycle chaincode checkcommitreadiness --channelID <span class="hljs-variable">$CHANNEL_NAME</span> --name mycar --version 1.0 --sequence 1 --collections-config /opt/gopath/src/github.com/hyperledger/fabric/peer/chaincode/myCarPrivate-js/collections_config.json --signature-policy <span class="hljs-string">&quot;OR(&#x27;Org1MSP.member&#x27;,&#x27;Org2MSP.member&#x27;)&quot;</span>
+</div></code></pre>
+<h3 id="10-peer0org1examplecom節點提交智慧合約定義">10. peer0.org1.example.com節點提交智慧合約定義</h3>
+<pre><code class="language-bash"><div><span class="hljs-comment"># 轉換至peer0.org1.example.com</span>
+$ <span class="hljs-built_in">export</span> CORE_PEER_LOCALMSPID=<span class="hljs-string">&quot;Org1MSP&quot;</span>
+$ <span class="hljs-built_in">export</span> CORE_PEER_MSPCONFIGPATH=/opt/gopath/src/github.com/hyperledger/fabric/peer/organizations/peerOrganizations/org1.example.com/users/Admin@org1.example.com/msp
+$ <span class="hljs-built_in">export</span> CORE_PEER_TLS_ROOTCERT_FILE=/opt/gopath/src/github.com/hyperledger/fabric/peer/organizations/peerOrganizations/org1.example.com/peers/peer0.org1.example.com/tls/ca.crt
+$ <span class="hljs-built_in">export</span> CORE_PEER_ADDRESS=peer0.org1.example.com:7051
+
+<span class="hljs-comment"># 提交智慧合約定義</span>
+$ <span class="hljs-built_in">export</span> CHANNEL_NAME=dev-channel
+$ peer lifecycle chaincode commit -o orderer.example.com:7050 --tls --cafile /opt/gopath/src/github.com/hyperledger/fabric/peer/organizations/ordererOrganizations/example.com/orderers/orderer.example.com/msp/tlscacerts/tlsca.example.com-cert.pem --channelID <span class="hljs-variable">$CHANNEL_NAME</span> --name mycar --version 1.0 --sequence 1 --collections-config /opt/gopath/src/github.com/hyperledger/fabric/peer/chaincode/myCarPrivate-js/collections_config.json --signature-policy <span class="hljs-string">&quot;OR(&#x27;Org1MSP.member&#x27;,&#x27;Org2MSP.member&#x27;)&quot;</span> --peerAddresses peer0.org1.example.com:7051 --tlsRootCertFiles /opt/gopath/src/github.com/hyperledger/fabric/peer/organizations/peerOrganizations/org1.example.com/peers/peer0.org1.example.com/tls/ca.crt --peerAddresses peer0.org2.example.com:9051 --tlsRootCertFiles /opt/gopath/src/github.com/hyperledger/fabric/peer/organizations/peerOrganizations/org2.example.com/peers/peer0.org2.example.com/tls/ca.crt 
+</div></code></pre>
+<h3 id="11-peer0org1examplecom節點查詢已提交的智慧合約定義">11. peer0.org1.example.com節點查詢已提交的智慧合約定義</h3>
+<pre><code class="language-bash"><div><span class="hljs-comment"># 轉換至peer0.org1.example.com</span>
+$ <span class="hljs-built_in">export</span> CORE_PEER_LOCALMSPID=<span class="hljs-string">&quot;Org1MSP&quot;</span>
+$ <span class="hljs-built_in">export</span> CORE_PEER_MSPCONFIGPATH=/opt/gopath/src/github.com/hyperledger/fabric/peer/organizations/peerOrganizations/org1.example.com/users/Admin@org1.example.com/msp
+$ <span class="hljs-built_in">export</span> CORE_PEER_TLS_ROOTCERT_FILE=/opt/gopath/src/github.com/hyperledger/fabric/peer/organizations/peerOrganizations/org1.example.com/peers/peer0.org1.example.com/tls/ca.crt
+$ <span class="hljs-built_in">export</span> CORE_PEER_ADDRESS=peer0.org1.example.com:7051
+
+<span class="hljs-comment"># 查詢已提交的智慧合約定義</span>
+$ <span class="hljs-built_in">export</span> CHANNEL_NAME=dev-channel
+$ peer lifecycle chaincode querycommitted --channelID <span class="hljs-variable">$CHANNEL_NAME</span> --name mycar
+</div></code></pre>
+<h3 id="12-peer0org1examplecom節點執行智慧合約初始化函式">12. peer0.org1.example.com節點執行智慧合約初始化函式</h3>
+<pre><code class="language-bash"><div><span class="hljs-comment"># 轉換至peer0.org1.example.com</span>
+$ <span class="hljs-built_in">export</span> CORE_PEER_LOCALMSPID=<span class="hljs-string">&quot;Org1MSP&quot;</span>
+$ <span class="hljs-built_in">export</span> CORE_PEER_MSPCONFIGPATH=/opt/gopath/src/github.com/hyperledger/fabric/peer/organizations/peerOrganizations/org1.example.com/users/Admin@org1.example.com/msp
+$ <span class="hljs-built_in">export</span> CORE_PEER_TLS_ROOTCERT_FILE=/opt/gopath/src/github.com/hyperledger/fabric/peer/organizations/peerOrganizations/org1.example.com/peers/peer0.org1.example.com/tls/ca.crt
+$ <span class="hljs-built_in">export</span> CORE_PEER_ADDRESS=peer0.org1.example.com:7051
+
+<span class="hljs-comment"># 執行智慧合約初始化函式</span>
+$ <span class="hljs-built_in">export</span> CHANNEL_NAME=dev-channel
+$ peer chaincode invoke -o orderer.example.com:7050 --tls --cafile /opt/gopath/src/github.com/hyperledger/fabric/peer/organizations/ordererOrganizations/example.com/orderers/orderer.example.com/msp/tlscacerts/tlsca.example.com-cert.pem -C <span class="hljs-variable">$CHANNEL_NAME</span> -n mycar --peerAddresses peer0.org1.example.com:7051 --tlsRootCertFiles /opt/gopath/src/github.com/hyperledger/fabric/peer/organizations/peerOrganizations/org1.example.com/peers/peer0.org1.example.com/tls/ca.crt --peerAddresses peer0.org2.example.com:9051 --tlsRootCertFiles /opt/gopath/src/github.com/hyperledger/fabric/peer/organizations/peerOrganizations/org2.example.com/peers/peer0.org2.example.com/tls/ca.crt -c <span class="hljs-string">&#x27;{&quot;function&quot;:&quot;InitLedger&quot;,&quot;Args&quot;:[]}&#x27;</span>
+</div></code></pre>
+<h3 id="13-peer0org1examplecom節點執行智慧合約查詢資料函式">13. peer0.org1.example.com節點執行智慧合約查詢資料函式</h3>
+<pre><code class="language-bash"><div><span class="hljs-comment"># 轉換至peer0.org1.example.com</span>
+$ <span class="hljs-built_in">export</span> CORE_PEER_LOCALMSPID=<span class="hljs-string">&quot;Org1MSP&quot;</span>
+$ <span class="hljs-built_in">export</span> CORE_PEER_MSPCONFIGPATH=/opt/gopath/src/github.com/hyperledger/fabric/peer/organizations/peerOrganizations/org1.example.com/users/Admin@org1.example.com/msp
+$ <span class="hljs-built_in">export</span> CORE_PEER_TLS_ROOTCERT_FILE=/opt/gopath/src/github.com/hyperledger/fabric/peer/organizations/peerOrganizations/org1.example.com/peers/peer0.org1.example.com/tls/ca.crt
+$ <span class="hljs-built_in">export</span> CORE_PEER_ADDRESS=peer0.org1.example.com:7051
+
+<span class="hljs-comment"># 執行智慧合約查詢資料函式</span>
+$ <span class="hljs-built_in">export</span> CHANNEL_NAME=dev-channel
+$ peer chaincode query -C <span class="hljs-variable">$CHANNEL_NAME</span> -n mycar -c <span class="hljs-string">&#x27;{&quot;Args&quot;:[&quot;readMyCar&quot;, &quot;car1&quot;]}&#x27;</span>
+</div></code></pre>
+<h3 id="14-peer0org1examplecom節點執行智慧合約新增資料函式">14. peer0.org1.example.com節點執行智慧合約新增資料函式</h3>
+<pre><code class="language-bash"><div><span class="hljs-comment"># 轉換至peer0.org1.example.com</span>
+$ <span class="hljs-built_in">export</span> CORE_PEER_LOCALMSPID=<span class="hljs-string">&quot;Org1MSP&quot;</span>
+$ <span class="hljs-built_in">export</span> CORE_PEER_MSPCONFIGPATH=/opt/gopath/src/github.com/hyperledger/fabric/peer/organizations/peerOrganizations/org1.example.com/users/Admin@org1.example.com/msp
+$ <span class="hljs-built_in">export</span> CORE_PEER_TLS_ROOTCERT_FILE=/opt/gopath/src/github.com/hyperledger/fabric/peer/organizations/peerOrganizations/org1.example.com/peers/peer0.org1.example.com/tls/ca.crt
+$ <span class="hljs-built_in">export</span> CORE_PEER_ADDRESS=peer0.org1.example.com:7051
+
+<span class="hljs-comment"># 執行智慧合約查詢資料函式</span>
+$ <span class="hljs-built_in">export</span> CHANNEL_NAME=dev-channel
+$ <span class="hljs-built_in">export</span> PD_Price=$(<span class="hljs-built_in">echo</span> -n <span class="hljs-string">&quot;10000&quot;</span> | base64 | tr -d \\n)
+$ <span class="hljs-built_in">export</span> PD_Mfg=$(<span class="hljs-built_in">echo</span> -n <span class="hljs-string">&quot;2021/8/1&quot;</span> | base64 | tr -d \\n)
+$ peer chaincode invoke -o orderer.example.com:7050 --tls --cafile /opt/gopath/src/github.com/hyperledger/fabric/peer/organizations/ordererOrganizations/example.com/orderers/orderer.example.com/msp/tlscacerts/tlsca.example.com-cert.pem -C <span class="hljs-variable">$CHANNEL_NAME</span> -n mycar --peerAddresses peer0.org1.example.com:7051 --tlsRootCertFiles /opt/gopath/src/github.com/hyperledger/fabric/peer/organizations/peerOrganizations/org1.example.com/peers/peer0.org1.example.com/tls/ca.crt --peerAddresses peer0.org2.example.com:9051 --tlsRootCertFiles /opt/gopath/src/github.com/hyperledger/fabric/peer/organizations/peerOrganizations/org2.example.com/peers/peer0.org2.example.com/tls/ca.crt -c <span class="hljs-string">&#x27;{&quot;function&quot;:&quot;createMyCar&quot;,&quot;Args&quot;:[&quot;car7&quot;, &quot;toyota&quot;, &quot;Rav4&quot;, &quot;white&quot;, &quot;Tom&quot;]}&#x27;</span> --transient <span class="hljs-string">&quot;{\&quot;price\&quot;:\&quot;<span class="hljs-variable">$PD_Price</span>\&quot;,\&quot;mfg\&quot;:\&quot;<span class="hljs-variable">$PD_Mfg</span>\&quot;}&quot;</span>
+</div></code></pre>
+<hr>
+<h1 id="啟動應用程式"><a name="2">啟動應用程式</a></h1>
+<h3 id="1-將mycarprivateapp-js應用程式下載於專案目錄fabric-app">1. 將myCarPrivateApp-js應用程式下載於專案目錄fabric-app。</h3>
+<h3 id="2-啟動vscode並於檔案總管將mycarprivateapp-js應用程式加入工作區">2. 啟動VSCode，並於檔案總管將myCarPrivateApp-js應用程式加入工作區。</h3>
+<h3 id="3-在工作區mycarprivateapp-js應用程式目錄點選右鍵選擇在整合性終端機中開啟">3. 在工作區myCarPrivateApp-js應用程式目錄點選右鍵，選擇「在整合性終端機中開啟」。</h3>
+<h3 id="4-新增orderer節點ca與tlsca憑證">4. 新增Orderer節點CA與TLSCA憑證。</h3>
+<pre><code class="language-bash"><div><span class="hljs-comment"># 在VSCode下方終端機輸入以下指令</span>
+<span class="hljs-comment"># 新增Orderer排序節點憑證目錄</span>
+$ <span class="hljs-built_in">cd</span> ~/fabric-app/myCarPrivateApp-js/
+$ mkdir -p ./wallet/peer-cert/ordererOrganizations/example.com/ca ./wallet/peer-cert/ordererOrganizations/example.com/tlsca
+
+<span class="hljs-comment"># 複製Orderer排序節點憑證</span>
+$ cp -i ~/fabric-dev/organizations/ordererOrganizations/example.com/ca/ca.example.com-cert.pem ./wallet/peer-cert/ordererOrganizations/example.com/ca
+$ cp -i ~/fabric-dev/organizations/ordererOrganizations/example.com/tlsca/tlsca.example.com-cert.pem ./wallet/peer-cert/ordererOrganizations/example.com/tlsca
+</div></code></pre>
+<h3 id="5-新增org1節點ca與tlsca憑證">5. 新增Org1節點CA與TLSCA憑證。</h3>
+<pre><code class="language-bash"><div><span class="hljs-comment"># 在VSCode下方終端機輸入以下指令</span>
+<span class="hljs-comment"># 新增Org1節點憑證目錄</span>
+$ <span class="hljs-built_in">cd</span> ~/fabric-app/myCarPrivateApp-js/
+$ mkdir -p ./wallet/peer-cert/peerOrganizations/org1.example.com/ca ./wallet/peer-cert/peerOrganizations/org1.example.com/tlsca
+
+<span class="hljs-comment"># 複製Org1排序節點憑證</span>
+$ cp -i ~/fabric-dev/organizations/peerOrganizations/org1.example.com/ca/ca.org1.example.com-cert.pem ./wallet/peer-cert/peerOrganizations/org1.example.com/ca
+$ cp -i ~/fabric-dev/organizations/peerOrganizations/org1.example.com/tlsca/tlsca.org1.example.com-cert.pem ./wallet/peer-cert/peerOrganizations/org1.example.com/tlsca
+</div></code></pre>
+<h3 id="6-新增org2節點ca與tlsca憑證">6. 新增Org2節點CA與TLSCA憑證。</h3>
+<pre><code class="language-bash"><div><span class="hljs-comment"># 在VSCode下方終端機輸入以下指令</span>
+<span class="hljs-comment"># 新增Org2節點憑證目錄</span>
+$ <span class="hljs-built_in">cd</span> ~/fabric-app/myCarPrivateApp-js/
+$ mkdir -p ./wallet/peer-cert/peerOrganizations/org2.example.com/ca ./wallet/peer-cert/peerOrganizations/org2.example.com/tlsca
+
+<span class="hljs-comment"># 複製Org2排序節點憑證</span>
+$ cp -i ~/fabric-dev/organizations/peerOrganizations/org2.example.com/ca/ca.org2.example.com-cert.pem ./wallet/peer-cert/peerOrganizations/org2.example.com/ca
+$ cp -i ~/fabric-dev/organizations/peerOrganizations/org2.example.com/tlsca/tlsca.org2.example.com-cert.pem ./wallet/peer-cert/peerOrganizations/org2.example.com/tlsca
+</div></code></pre>
+<h3 id="7-執行enrolladminjs取得org1-ca-admin憑證">7. 執行enrollAdmin.js取得Org1 CA Admin憑證</h3>
+<pre><code class="language-js"><div><span class="hljs-comment">// 開啟 enrollAdmin.js</span>
+<span class="hljs-comment">// 將for VSCode Local Fabric Network段落變數註解</span>
+<span class="hljs-comment">// 將for Fabric Dev Network段落取消註解並儲存檔案</span>
+<span class="hljs-comment">//for Fabric Dev Network</span>
+<span class="hljs-keyword">const</span> connectionProfile = <span class="hljs-string">&quot;connection.json&quot;</span>;
+<span class="hljs-keyword">const</span> caServer = <span class="hljs-string">&quot;ca.org1.example.com&quot;</span>;
+<span class="hljs-keyword">const</span> orgName = <span class="hljs-string">&quot;org1.example.com&quot;</span>;
+<span class="hljs-keyword">const</span> orgMSPID = <span class="hljs-string">&quot;Org1MSP&quot;</span>;
+<span class="hljs-keyword">const</span> enrollID = <span class="hljs-string">&quot;admin&quot;</span>;
+<span class="hljs-keyword">const</span> enrollSecret = <span class="hljs-string">&quot;adminpw&quot;</span>;
+<span class="hljs-keyword">const</span> identityLabel = <span class="hljs-string">&quot;admin&quot;</span>;
+</div></code></pre>
+<pre><code class="language-bash"><div><span class="hljs-comment"># 在VSCode下方終端機輸入以下指令</span>
+<span class="hljs-comment"># 取得Org1 CA Admin憑證</span>
+$ <span class="hljs-built_in">cd</span> ~/fabric-app/myCarPrivateApp-js/
+$ node enrollAdmin.js
+</div></code></pre>
+<h3 id="8-執行registeruserjs註冊org1新使用者user2並取得user2憑證">8. 執行registerUser.js註冊Org1新使用者User2，並取得User2憑證</h3>
+<pre><code class="language-js"><div><span class="hljs-comment">// 開啟 registerUser.js</span>
+<span class="hljs-comment">// 將for VSCode Local Fabric Network段落變數註解</span>
+<span class="hljs-comment">// 將for Fabric Dev Network段落取消註解並儲存檔案</span>
+<span class="hljs-comment">//for Fabric Dev Network</span>
+<span class="hljs-keyword">const</span> connectionProfile = <span class="hljs-string">&quot;connection.json&quot;</span>;
+<span class="hljs-keyword">const</span> caServer = <span class="hljs-string">&quot;ca.org1.example.com&quot;</span>;
+<span class="hljs-keyword">const</span> orgName = <span class="hljs-string">&quot;org1.example.com&quot;</span>;
+<span class="hljs-keyword">const</span> orgMSPID = <span class="hljs-string">&quot;Org1MSP&quot;</span>;
+<span class="hljs-keyword">const</span> adminEnrollID = <span class="hljs-string">&quot;admin&quot;</span>;
+<span class="hljs-keyword">const</span> adminIdentityLabel = <span class="hljs-string">&quot;admin&quot;</span>;
+<span class="hljs-keyword">const</span> newUserOrgDept = <span class="hljs-string">&quot;org1.department1&quot;</span>;
+<span class="hljs-keyword">const</span> newUserEnrollID = <span class="hljs-string">&quot;User2&quot;</span>
+<span class="hljs-keyword">const</span> newUserEnrollSecret = <span class="hljs-string">&quot;user2pw&quot;</span>
+<span class="hljs-keyword">const</span> newIdentityLabel = <span class="hljs-string">&quot;User2@org1.example.com&quot;</span>
+</div></code></pre>
+<pre><code class="language-bash"><div><span class="hljs-comment"># 在VSCode下方終端機輸入以下指令</span>
+<span class="hljs-comment"># 註冊Org1新使用者User2，並取得User2憑證</span>
+$ <span class="hljs-built_in">cd</span> ~/fabric-app/myCarPrivateApp-js/
+$ node registerUser.js
+</div></code></pre>
+<h3 id="9-調整querycarjs-fabric-network的變數">9. 調整queryCar.js fabric-network的變數</h3>
+<pre><code class="language-js"><div><span class="hljs-comment">// 開啟 ./lib/queryCar.js</span>
+<span class="hljs-comment">// 將for VSCode Local Fabric Network段落變數註解</span>
+<span class="hljs-comment">// 將for Fabric Dev Network段落取消註解並儲存檔案</span>
+<span class="hljs-number">6</span>  <span class="hljs-comment">//for VSCode Local Fabric Network</span>
+<span class="hljs-number">7</span>  <span class="hljs-comment">//const connectionProfile = &quot;2Org2PeerOrg1GatewayConnection.json&quot;;</span>
+<span class="hljs-number">8</span>  <span class="hljs-comment">//const orgName = &quot;Org1&quot;;</span>
+<span class="hljs-number">9</span>  <span class="hljs-comment">//const userIdentity = &quot;Org1 Admin&quot;;</span>
+<span class="hljs-number">10</span> <span class="hljs-comment">//const channelName = &quot;mychannel&quot;;</span>
+<span class="hljs-number">11</span> <span class="hljs-comment">//const contrcatName = &quot;mycar&quot;;</span>
+
+<span class="hljs-number">13</span> <span class="hljs-comment">//for Fabric Dev Network</span>
+<span class="hljs-number">14</span> <span class="hljs-keyword">const</span> connectionProfile = <span class="hljs-string">&quot;connection.json&quot;</span>;
+<span class="hljs-number">15</span> <span class="hljs-keyword">const</span> orgName = <span class="hljs-string">&quot;org1.example.com&quot;</span>;
+<span class="hljs-number">16</span> <span class="hljs-keyword">const</span> userIdentity = <span class="hljs-string">&quot;User2@org1.example.com&quot;</span>;
+<span class="hljs-number">17</span> <span class="hljs-keyword">const</span> channelName = <span class="hljs-string">&quot;dev-channel&quot;</span>;
+<span class="hljs-number">18</span> <span class="hljs-keyword">const</span> contrcatName = <span class="hljs-string">&quot;mycar&quot;</span>;
+</div></code></pre>
+<h3 id="10-調整connectjs-fabric-network的變數">10. 調整connect.js fabric-network的變數</h3>
+<pre><code class="language-js"><div><span class="hljs-comment">// 開啟 ./lib/connect.js</span>
+<span class="hljs-comment">// 將for VSCode Local Fabric Network段落變數註解</span>
+<span class="hljs-comment">// 將for Fabric Dev Network段落取消註解並儲存檔案</span>
+<span class="hljs-number">8</span>  <span class="hljs-comment">//for VSCode Local Fabric Network</span>
+<span class="hljs-number">9</span>  <span class="hljs-comment">//const connectionProfile = &quot;2Org2PeerOrg1GatewayConnection.json&quot;;</span>
+<span class="hljs-number">10</span> <span class="hljs-comment">//const orgName = &quot;Org1&quot;;</span>
+<span class="hljs-number">11</span> <span class="hljs-comment">//const userIdentity = &quot;Org1 Admin&quot;;</span>
+<span class="hljs-number">12</span> <span class="hljs-comment">//const channelName = &quot;mychannel&quot;;</span>
+<span class="hljs-number">13</span> <span class="hljs-comment">//const contrcatName = &quot;mycar&quot;;</span>
+
+<span class="hljs-number">14</span> <span class="hljs-comment">//for Fabric Dev Network</span>
+<span class="hljs-number">15</span> <span class="hljs-keyword">const</span> connectionProfile = <span class="hljs-string">&quot;connection.json&quot;</span>;
+<span class="hljs-number">16</span> <span class="hljs-keyword">const</span> orgName = <span class="hljs-string">&quot;org1.example.com&quot;</span>;
+<span class="hljs-number">17</span> <span class="hljs-keyword">const</span> userIdentity = <span class="hljs-string">&quot;User2@org1.example.com&quot;</span>;
+<span class="hljs-number">18</span> <span class="hljs-keyword">const</span> channelName = <span class="hljs-string">&quot;dev-channel&quot;</span>;
+<span class="hljs-number">19</span> <span class="hljs-keyword">const</span> contrcatName = <span class="hljs-string">&quot;mycar&quot;</span>;
+</div></code></pre>
+<h3 id="11-在下方終端機輸入指令npm-start啟動應用程式若看到listening-on-port-8066-表示已順利啟動應用程式">11. 在下方終端機輸入指令「npm start」啟動應用程式，若看到「Listening on port 8066... 」表示已順利啟動應用程式。</h3>
+<pre><code class="language-bash"><div><span class="hljs-comment"># 在VSCode下方終端機輸入以下指令</span>
+$ npm start
+</div></code></pre>
+<h3 id="12-以瀏覽器開啟http1270018080">12. 以瀏覽器開啟http://127.0.0.1:8080</h3>
+
+    </body>
+    </html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>https&colon;&sol;&sol;code&period;visualstudio&period;com&sol;docs&sol;setup&sol;linux</title>
+        <style>
+</style>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/katex.min.css" integrity="sha384-yFRtMMDnQtDRO8rLpMIKrtPCD5jdktao2TV19YiZYWMDkUR5GQZR/NOVTdquEx1j" crossorigin="anonymous">
+<link href="https://cdn.jsdelivr.net/npm/katex-copytex@latest/dist/katex-copytex.min.css" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/markdown.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/highlight.css">
+<style>
+            body {
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', system-ui, 'Ubuntu', 'Droid Sans', sans-serif;
+                font-size: 14px;
+                line-height: 1.6;
+            }
+        </style>
+        <style>
+.task-list-item { list-style-type: none; } .task-list-item-checkbox { margin-left: -20px; vertical-align: middle; }
+</style>
+        
+        <script src="https://cdn.jsdelivr.net/npm/katex-copytex@latest/dist/katex-copytex.min.js"></script>
+        
+    </head>
+    <body class="vscode-body vscode-light">
+        <h1 id="安裝vscode">安裝VSCode</h1>
+<pre><code class="language-bash"><div><span class="hljs-comment"># https://code.visualstudio.com/docs/setup/linux</span>
+$ wget -qO- https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor &gt; packages.microsoft.gpg
+
+$ sudo install -o root -g root -m 644 packages.microsoft.gpg /etc/apt/trusted.gpg.d/
+
+$ sudo sh -c <span class="hljs-string">&#x27;echo &quot;deb [arch=amd64,arm64,armhf signed-by=/etc/apt/trusted.gpg.d/packages.microsoft.gpg] https://packages.microsoft.com/repos/code stable main&quot; &gt; /etc/apt/sources.list.d/vscode.list&#x27;</span>
+
+$ sudo apt install apt-transport-https
+
+$ sudo apt update
+
+$ sudo apt install code
+</div></code></pre>
+<p><strong>Note:</strong> 若啟動VSCode後出現畫面顯示不完全，改以下列指令啟動：</p>
+<pre><code class="language-bash"><div>$ code --disable-gpu
+</div></code></pre>
+
+    </body>
+    </html>

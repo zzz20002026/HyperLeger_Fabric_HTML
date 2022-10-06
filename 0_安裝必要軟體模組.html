@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title></title>
+        <style>
+</style>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/katex.min.css" integrity="sha384-yFRtMMDnQtDRO8rLpMIKrtPCD5jdktao2TV19YiZYWMDkUR5GQZR/NOVTdquEx1j" crossorigin="anonymous">
+<link href="https://cdn.jsdelivr.net/npm/katex-copytex@latest/dist/katex-copytex.min.css" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/markdown.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/highlight.css">
+<style>
+            body {
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', system-ui, 'Ubuntu', 'Droid Sans', sans-serif;
+                font-size: 14px;
+                line-height: 1.6;
+            }
+        </style>
+        <style>
+.task-list-item { list-style-type: none; } .task-list-item-checkbox { margin-left: -20px; vertical-align: middle; }
+</style>
+        
+        <script src="https://cdn.jsdelivr.net/npm/katex-copytex@latest/dist/katex-copytex.min.js"></script>
+        
+    </head>
+    <body class="vscode-body vscode-light">
+        <h1 id="hyperledger-fabric-安裝必要軟體模組">Hyperledger Fabric 安裝必要軟體模組</h1>
+<ol>
+<li>
+<p>更新軟體模組套件清單</p>
+<pre><code class="language-bash"><div><span class="hljs-comment"># Update package lists</span>
+$ sudo apt-add-repository -y ppa:git-core/ppa
+$ sudo apt-get update
+</div></code></pre>
+</li>
+<li>
+<p>安裝CURL</p>
+<pre><code class="language-bash"><div> <span class="hljs-comment"># Install cURL</span>
+ $ sudo apt-get install -y curl
+</div></code></pre>
+</li>
+<li>
+<p>安裝Git</p>
+<pre><code class="language-bash"><div><span class="hljs-comment"># Install Git</span>
+$ sudo apt-get install -y git
+</div></code></pre>
+</li>
+<li>
+<p>安裝unzip</p>
+<pre><code class="language-bash"><div><span class="hljs-comment"># Install unzip</span>
+$ sudo apt-get -y install unzip
+</div></code></pre>
+</li>
+<li>
+<p>安裝Docker與Docker Compose</p>
+<pre><code class="language-bash"><div><span class="hljs-comment"># Update package lists</span>
+$ sudo apt-get update
+
+<span class="hljs-comment"># Ensure that CA certificates are installed</span>
+$ sudo apt-get -y install apt-transport-https ca-certificates gnupg-agent software-properties-common
+
+<span class="hljs-comment"># Add Docker repository key to APT keychain</span>
+$ curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+
+<span class="hljs-comment"># Installing Docker</span>
+$ sudo add-apt-repository <span class="hljs-string">&quot;deb [arch=amd64] https://download.docker.com/linux/ubuntu <span class="hljs-subst">$(lsb_release -cs)</span> stable&quot;</span>
+$ sudo apt-get update
+$ sudo apt-get -y install docker-ce docker-ce-cli containerd.io
+
+<span class="hljs-comment"># Add user account to the docker group</span>
+$ sudo usermod -aG docker $(whoami)
+
+<span class="hljs-comment"># Installing Docker-Compose</span>
+$ sudo curl -L <span class="hljs-string">&quot;https://github.com/docker/compose/releases/download/1.25.4/docker-compose-<span class="hljs-subst">$(uname -s)</span>-<span class="hljs-subst">$(uname -m)</span>&quot;</span> -o /usr/<span class="hljs-built_in">local</span>/bin/docker-compose
+$ sudo chmod +x /usr/<span class="hljs-built_in">local</span>/bin/docker-compose
+</div></code></pre>
+</li>
+<li>
+<p>安裝Node.JS</p>
+<pre><code class="language-bash"><div><span class="hljs-comment"># Install NodeJS</span>
+$ sudo apt-get -y install build-essential libssl-dev
+
+<span class="hljs-comment"># Execute nvm installation script</span>
+$ curl -o- https://raw.githubusercontent.com/creationix/nvm/master/install.sh | bash
+
+<span class="hljs-comment"># Set up nvm environment without restarting the shell</span>
+$ <span class="hljs-built_in">export</span> NVM_DIR=<span class="hljs-string">&quot;<span class="hljs-variable">${HOME}</span>/.nvm&quot;</span>
+[ -s <span class="hljs-string">&quot;<span class="hljs-variable">${NVM_DIR}</span>/nvm.sh&quot;</span> ] &amp;&amp; . <span class="hljs-string">&quot;<span class="hljs-variable">${NVM_DIR}</span>/nvm.sh&quot;</span>
+[ -s <span class="hljs-string">&quot;<span class="hljs-variable">${NVM_DIR}</span>/bash_completion&quot;</span> ] &amp;&amp; . <span class="hljs-string">&quot;<span class="hljs-variable">${NVM_DIR}</span>/bash_completion&quot;</span>
+
+<span class="hljs-comment"># Install node 12.20.2</span>
+$ nvm install v12.20.2
+$ nvm use v12.20.2
+</div></code></pre>
+</li>
+<li>
+<p>安裝Go-Lang</p>
+<pre><code class="language-bash"><div><span class="hljs-comment"># Installing Go-Lang v1.14.12</span>
+$ sudo wget https://dl.google.com/go/go1.14.12.linux-amd64.tar.gz -O <span class="hljs-string">&quot;/usr/local/go1.14.12.linux-amd64.tar.gz&quot;</span>
+$ sudo tar -C /usr/<span class="hljs-built_in">local</span> -xzf /usr/<span class="hljs-built_in">local</span>/go1.14.12.linux-amd64.tar.gz
+
+<span class="hljs-comment"># Set up Go environment variables to ~/.profile</span>
+$ <span class="hljs-built_in">echo</span> <span class="hljs-string">&#x27; 
+# Go-lang PATH
+export GORPATH=&quot;/usr/local/go&quot;
+export GOPATH=&quot;/home/&#x27;</span>$(whoami)<span class="hljs-string">&#x27;/go&quot;
+export PATH=&quot;$PATH:$GORPATH/bin&quot;&#x27;</span> &gt;&gt; ~/.profile
+</div></code></pre>
+</li>
+<li>
+<p>Ubuntu重新開機</p>
+</li>
+<li>
+<p>確認軟體模組安裝結果</p>
+<pre><code class="language-bash"><div><span class="hljs-comment"># Print installation details for user</span>
+$ docker --version
+$ docker-compose --version
+$ nvm --version
+$ node --version
+$ npm --version
+$ go version
+</div></code></pre>
+</li>
+</ol>
+
+    </body>
+    </html>
